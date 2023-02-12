@@ -18,7 +18,7 @@ public class HelloWorldSpring {
 			System.out.println(context.getBean("person")); // user defined type
 			System.out.println(context.getBean("myBean")); // user defined type
 			System.out.println(context.getBean("person3")); // user defined type
-			System.out.println(context.getBean(Person.class)); // getting bean by type. This will throw an exception is multiple matching candidate beans are found and if there is no any primary bean defined.
+			System.out.println(context.getBean(Person.class)); // getting bean by type. This will throw an exception as multiple matching candidate beans are found and if there is no any primary bean defined.
 		} catch (BeansException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

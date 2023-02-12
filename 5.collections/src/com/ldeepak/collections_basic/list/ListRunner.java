@@ -118,7 +118,8 @@ public class ListRunner {
 		studentsAl.sort(new DescendingStudentComparator());
 		System.out.println(studentsAl);
 		
-		System.out.println();
+		System.out.println();	
+		
 	}
 
 }

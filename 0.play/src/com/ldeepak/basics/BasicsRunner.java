@@ -47,6 +47,24 @@ public class BasicsRunner {
         int x = Character.getNumericValue(ch);
         System.out.println(x);
         
+        /**
+         * String conversions
+         */
+        StringBuilder sb = new StringBuilder("343");
+        
+        // string builder to string
+        String str = sb.toString(); 
+        
+        // string to int
+        int val = Integer.valueOf(str);
+        
+        // int to string
+        String b = String.valueOf(val);
+        
+        // char to int
+        int bb = b.charAt(0) - '0';
+        
+       
 	}
 
 }
