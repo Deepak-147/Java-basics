@@ -2,8 +2,29 @@ package com.ldeepak.multithreading;
 
 /***
  * 
- * You can either extend the Thread class and override its run() method to define the thread's task 
- * or implement the Runnable interface and pass an instance of the class to the Thread constructor. 
+ * Multitasking
+ * 	---> Process based:
+ * 			- Allows two or more programs concurrently, 
+ * 			- Process is heavy weight
+ * 			- Requires more overhead
+ *  ---> Thread based 
+ *  		- Allows a program to perform two or more tasks simultaneously
+ *  		- Thread is light weight
+ *  		- Requires less overhead
+ *  
+ *  Multithreading is a special form of Multitasking
+ *  
+ *  Lifecycle of a thread:
+ *  	1. New: When a thread is newly created
+ *  	2. Runnable: After start(), thread is in Runnable state. It is the responsibility of OS or thread scheduler to run this thread instantly or keep it in the runnable thread pool
+ *  	3. Running: After run(), thread scheduler picks one of the threads from the runnable thread pool and make it run
+ *  	4. Non runnable (Blocked/Waiting): When a thread is alive and waiting for some resources, it is said to be in Non runnable state. Once the wait is over the thread is moved back to the runnable thread pool
+ *  	5. Terminated: When thread finishes its execution
+ *  
+ * Creating a thread:
+ * 		1. You can either extend the Thread class and override its run() method to define the thread's task 
+ * 		2. Or implement the Runnable interface and pass an instance of the class to the Thread constructor
+ * 
  * The start() method is then called to begin the execution of the thread, which runs concurrently 
  * with other threads in the JVM, enabling multithreading capabilities.
  *
@@ -13,8 +34,8 @@ package com.ldeepak.multithreading;
  * These daemon threads are useful for tasks like garbage collection, etc.
  * 
  * Benefits of Multithreading:
- * 1. Time saving as multiple operations are performed concurrently.
- * 2. Since threads are independent, other threads don't get affected even if an exception occurs in a single thread.
+ * 1. Time saving as multiple operations are performed concurrently
+ * 2. Since threads are independent, other threads don't get affected even if an exception occurs in a single thread
  * 3. Increased throughput
  * 4. Increased responsiveness
  * 
