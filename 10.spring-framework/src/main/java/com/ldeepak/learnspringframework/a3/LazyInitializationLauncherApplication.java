@@ -40,12 +40,11 @@ public class LazyInitializationLauncherApplication {
 		
 		try (var context = new AnnotationConfigApplicationContext(LazyInitializationLauncherApplication.class)) {
 			
-			context.getBean(ClassB.class).doSomething(); // without the use of ClassB bean, it will not be initialized.
+//			context.getBean(ClassA.class); // only ClassA bean will be created, ClassB bean is not created as it is marked Lazy.
+			context.getBean(ClassB.class).doSomething(); // Both ClassA and ClassB bean will be created.
 		} catch (BeansException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
-
 }

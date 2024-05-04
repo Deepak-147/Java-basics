@@ -12,5 +12,4 @@ public class MongoDBDataService implements DataService {
 		// TODO Auto-generated method stub
 		return new int[] {1, 2, 3, 4, 5};
 	}
-
 }

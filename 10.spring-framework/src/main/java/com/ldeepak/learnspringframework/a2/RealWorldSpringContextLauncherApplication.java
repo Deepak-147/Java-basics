@@ -6,7 +6,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 // Rather than just managing the objects, we can let spring create objects for us.
-
 @Configuration
 @ComponentScan
 public class RealWorldSpringContextLauncherApplication {

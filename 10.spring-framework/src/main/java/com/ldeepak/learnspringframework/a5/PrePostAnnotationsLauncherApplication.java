@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 
-
 @Component
 class SomeClass {
 	private SomeDependency someDependency;
@@ -38,10 +37,8 @@ class SomeClass {
 class SomeDependency {
 
 	public void getReady() {
-		System.out.println("Some logic using dependency");
-		
+		System.out.println("Some logic using dependency");	
 	}
-	
 }
 
 @Configuration
@@ -52,8 +49,7 @@ public class PrePostAnnotationsLauncherApplication {
 		// TODO Auto-generated method stub
 		
 		try (var context = new AnnotationConfigApplicationContext(PrePostAnnotationsLauncherApplication.class)) {
-			
-			
+
 		} catch (BeansException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

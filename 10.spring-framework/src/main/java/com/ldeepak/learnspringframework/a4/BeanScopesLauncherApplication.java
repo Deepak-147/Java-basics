@@ -11,13 +11,13 @@ import org.springframework.stereotype.Component;
 // By default bean scope is Singleton.
 @Component
 class NormalClass {
-	
+
 }
 
 @Component
 @Scope(value=ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 class PrototypeClass {
-	
+
 }
 
 @Configuration

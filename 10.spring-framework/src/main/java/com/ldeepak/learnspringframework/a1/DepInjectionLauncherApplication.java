@@ -7,7 +7,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
-
 @Component
 class YourBusinessClass {
 
@@ -66,19 +65,13 @@ class Dependency2 {
 @Configuration
 @ComponentScan
 public class DepInjectionLauncherApplication {
-	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub		
 		try (var context = new AnnotationConfigApplicationContext(DepInjectionLauncherApplication.class)) {
-			
 			System.out.println(context.getBean(YourBusinessClass.class));
-			
 		} catch (BeansException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
-
 }

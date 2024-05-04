@@ -1,4 +1,4 @@
-/* This script would be executed automatically */
+/* This script would be executed automatically. It will work only with h2 database */
 
 insert into COURSE (ID, AUTHOR, NAME)
 values(100001, 'in28Minutes', 'Java for beginners');
